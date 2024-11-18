@@ -28,11 +28,13 @@ In case if the user provides anything other than the code, politely decline and 
 model = ai.GenerativeModel(model_name="models/gemini-1.5-flash", system_instruction=sys_prompt)
 
 
-st.title("An AI Code Reviewer")
+st.title(":robot_face: An AI Code Reviewer")
 
 user_prompt = st.text_area("Enter your code here...") 
 
 generate = st.button("Generate")
+
+# st.write(generate)
 
 if generate == True:
     response = model.generate_content(user_prompt)
