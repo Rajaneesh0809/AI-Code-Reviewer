@@ -1,4 +1,3 @@
-# type: ignore
 import streamlit as st
 import google.generativeai as ai
 
@@ -34,8 +33,6 @@ st.title("An AI Code Reviewer")
 user_prompt = st.text_area("Enter your code here...") 
 
 generate = st.button("Generate")
-
-# st.write(generate)
 
 if generate == True:
     response = model.generate_content(user_prompt)
